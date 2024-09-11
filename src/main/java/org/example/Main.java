@@ -2,10 +2,10 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        MultithreadThing myThread = new MultithreadThing();
-        MultithreadThing myThread2 = new MultithreadThing();
-
+        MultithreadThing multithreadThing = new MultithreadThing();
+        Thread myThread = new Thread(multithreadThing);
+        System.out.println(myThread.isAlive());
         myThread.start();
-        myThread2.start();
+        System.out.println(myThread.isAlive());
     }
 }
